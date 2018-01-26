@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel renders correctly 1`] = `
+<div
+  className="carousel__wrapper"
+>
+  <div
+    className="carousel"
+  >
+    <span
+      className="carousel__tab"
+      key="0001"
+    >
+      Title 1
+    </span>
+    <span
+      className="carousel__tab"
+      key="0010"
+    >
+      Title 2
+    </span>
+    <span
+      className="carousel__tab"
+      key="0101"
+    >
+      Title 3
+    </span>
+  </div>
+  <button
+    className="carousel__button btn--left"
+    onClick={[Function]}
+  >
+    &lt;-
+  </button>
+  <button
+    className="carousel__button btn--right btn--more"
+    onClick={[Function]}
+  >
+    -&gt;
+  </button>
+</div>
+`;

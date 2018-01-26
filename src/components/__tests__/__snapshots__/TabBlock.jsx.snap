@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quiz Feedback renders correctly 1`] = `
+<div
+  className="block-tab__container"
+>
+  <div
+    className="block-tab__row"
+  >
+    <div
+      className="block-tab__wrapper"
+    >
+      <Carousel
+        onTabClick={[Function]}
+        selectedTabId=""
+        tabs={
+          Array [
+            Object {
+              "description": "<p>Description here</p>",
+              "id": "0001",
+              "title": "Title 1",
+            },
+            Object {
+              "description": "<p>Description here</p>",
+              "id": "0010",
+              "title": "Title 2",
+            },
+            Object {
+              "description": "<p>Description here</p>",
+              "id": "0101",
+              "media": "fake://img.con",
+              "title": "Title 3",
+            },
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

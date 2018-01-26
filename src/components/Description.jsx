@@ -2,13 +2,13 @@ import React from 'react';
 import ImageZoom from 'react-medium-image-zoom';
 import PropTypes from 'prop-types';
 
-const Description = (props) => (
+const Description = ({ description, media }) => (
   <div>
-    <div dangerouslySetInnerHTML={ { __html: props.description } } />
+    <div dangerouslySetInnerHTML={ { __html: description } } />
     { !!media &&
       <ImageZoom
         image={ {
-          src: props.media,
+          src: media,
           className: 'img',
           style: { width: '20em' }
         } }
@@ -22,3 +22,4 @@ Description.propTypes = {
   media: PropTypes.string
 };
 
+export default Description;

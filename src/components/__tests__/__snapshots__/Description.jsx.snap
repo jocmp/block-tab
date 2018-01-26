@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description renders correctly 1`] = `
+<div>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>Description here</p>",
+      }
+    }
+  />
+  <ImageZoom
+    defaultStyles={
+      Object {
+        "image": Object {},
+        "overlay": Object {},
+        "zoomContainer": Object {},
+        "zoomImage": Object {},
+      }
+    }
+    image={
+      Object {
+        "className": "img",
+        "src": "fake://img.con",
+        "style": Object {
+          "width": "20em",
+        },
+      }
+    }
+    onUnzoom={[Function]}
+    onZoom={[Function]}
+    shouldHandleZoom={[Function]}
+    shouldReplaceImage={true}
+    shouldRespectMaxDimension={false}
+    zoomMargin={40}
+  />
+</div>
+`;

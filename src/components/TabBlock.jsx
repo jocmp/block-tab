@@ -1,26 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'underscore';
+import Carousel from './Carousel';
 
 class TabBlock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentIndex: 0
+      selectedTabId: ''
     };
-    this.scrollToStart = this.scrollToStart.bind(this);
-    this.scrollToEnd = this.scrollToEnd.bind(this);
+
+    this.onTabClick = this.onTabClick.bind(this);
   }
 
   componentWillMount() {
     this.props.fetchTabGroup('1');
   }
 
-  scrollToStart() {
-    this.carousel.scrollBy({ left: -this.carousel.clientWidth, behavior: 'smooth' });
+  componentWillReceiveProps(nextProps) {
+    if (_.isEmpty(this.state.selectedTabId)) {
+      this.setState({ selectedTabId: _.defaults(_.first(nextProps.tabGroup.tabs), { id: '' }).id })
+    }
   }
 
-  scrollToEnd() {
-    this.carousel.scrollBy({ left: this.carousel.clientWidth, behavior: 'smooth' });
+  onTabClick(selectedTabId) {
+    return () => {
+      this.setState({ selectedTabId });
+    };
   }
 
   render() {
@@ -28,15 +34,7 @@ class TabBlock extends React.Component {
       <div className="block-tab__container">
         <div className="block-tab__row">
           <div className="block-tab__wrapper">
-            <div className="carousel__wrapper">
-              <button className="carousel__button btn--left" onClick={ this.scrollToStart }>{ '<-' }</button>
-              <div className="carousel" ref={ (carousel) => { this.carousel = carousel; } }>
-                { this.props.tabGroup.tabs.map((tab) =>
-                  <span key={ tab.id } className="carousel__tab">{ tab.title }</span>
-                ) }
-              </div>
-              <button className="carousel-button btn--right" onClick={ this.scrollToEnd }>{ '->' }</button>
-            </div>
+            <Carousel tabs={ this.props.tabGroup.tabs } onTabClick={ this.onTabClick } selectedTabId={ this.state.selectedTabId } />
           </div>
         </div>
       </div>
@@ -52,7 +50,7 @@ TabBlock.propTypes = {
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       media: PropTypes.string
-    }))
+    })).isRequired
   })
 };
 
