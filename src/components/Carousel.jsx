@@ -25,9 +25,9 @@ class Carousel extends React.Component {
     return (
       <div className="carousel__wrapper">
         <div className="carousel" ref={ (carousel) => { this.carousel = carousel; } }>
-          { this.props.tabs.map((tab) =>
+          { this.props.tabs.map((tab, index) =>
             <span
-              key={ tab.id }
+              key={ index }
               onClick={ this.props.onTabClick(tab.id) }
               className={ classNames('carousel__tab', { 'carousel__tab--selected': tab.id === this.props.selectedTabId }) }>
               { tab.title }
@@ -37,12 +37,12 @@ class Carousel extends React.Component {
         <button
           className={ classNames('carousel__button', 'btn--left', { 'btn--more': !this.state.moreToScroll }) }
           onClick={ this.scrollToStart }>
-          <i className="indicator indicator-left" />
+          <i className="indicator fa fa-chevron-left" />
         </button>
         <button
           className={ classNames('carousel__button', 'btn--right', { 'btn--more': this.state.moreToScroll }) }
           onClick={ this.scrollToEnd }>
-          <i className="fa fa-chevron-right" />
+          <i className="indicator fa fa-chevron-right" />
         </button>
       </div>
     );
@@ -55,9 +55,9 @@ Carousel.propTypes = {
   selectedTabId: PropTypes.string,
   onTabClick: PropTypes.func.isRequired,
   tabs: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string,
     media: PropTypes.string
   })).isRequired
 };

@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Carousel handles an empty tab 1`] = `
+<div
+  className="carousel__wrapper"
+>
+  <div
+    className="carousel"
+  >
+    <span
+      className="carousel__tab"
+      key="0"
+    >
+      Title 1
+    </span>
+    <span
+      className="carousel__tab"
+      key="1"
+    >
+      Title 2
+    </span>
+    <span
+      className="carousel__tab"
+      key="2"
+    >
+      Title 3
+    </span>
+    <span
+      className="carousel__tab carousel__tab--selected"
+      key="3"
+    />
+  </div>
+  <button
+    className="carousel__button btn--left"
+    onClick={[Function]}
+  >
+    <i
+      className="indicator fa fa-chevron-left"
+    />
+  </button>
+  <button
+    className="carousel__button btn--right btn--more"
+    onClick={[Function]}
+  >
+    <i
+      className="indicator fa fa-chevron-right"
+    />
+  </button>
+</div>
+`;
+
 exports[`Carousel renders correctly 1`] = `
 <div
   className="carousel__wrapper"
@@ -9,19 +58,19 @@ exports[`Carousel renders correctly 1`] = `
   >
     <span
       className="carousel__tab"
-      key="0001"
+      key="0"
     >
       Title 1
     </span>
     <span
       className="carousel__tab"
-      key="0010"
+      key="1"
     >
       Title 2
     </span>
     <span
       className="carousel__tab"
-      key="0101"
+      key="2"
     >
       Title 3
     </span>
@@ -30,13 +79,17 @@ exports[`Carousel renders correctly 1`] = `
     className="carousel__button btn--left"
     onClick={[Function]}
   >
-    &lt;-
+    <i
+      className="indicator fa fa-chevron-left"
+    />
   </button>
   <button
     className="carousel__button btn--right btn--more"
     onClick={[Function]}
   >
-    -&gt;
+    <i
+      className="indicator fa fa-chevron-right"
+    />
   </button>
 </div>
 `;

@@ -9,8 +9,17 @@ describe('Description', () => {
   );
 
   it('renders correctly', () => {
-    const { description, media } = tab();
-    const wrapper = shallow(<Description description={ description } media={ media } />);
+    const wrapper = shallow(<Description tab={ tab() } active={ true } />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('handles empty description', () => {
+    const wrapper = shallow(<Description tab={ {} } active={ true } />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('renders inactive state', () => {
+    const wrapper = shallow(<Description tab={ {} } active={ false } />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

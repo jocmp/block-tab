@@ -3,6 +3,9 @@ $tablet-breakpoint: 48em;
 $laptop-breakpoint: 80em;
 
 $brand: #747a7e;
+$background-gray: #f5f5f5;
+$background-hover-gray: #efefef;
+$dark-gray: #313537;
 $light-gray: rgba(0, 0, 0, 0.1);
 
 .block-tab {
@@ -51,7 +54,7 @@ $light-gray: rgba(0, 0, 0, 0.1);
 }
 
 .carousel {
-  $tab-height: 4em;
+  $tab-height: 5em;
   display: flex;
   overflow-x: auto;
   margin: 0;
@@ -75,7 +78,7 @@ $light-gray: rgba(0, 0, 0, 0.1);
     justify-content: center;
     align-items: center;
     height: $tab-height;
-    min-width: 20%;
+    min-width: 33%;
     line-height: 1.2em;
     text-align: center;
     padding: 1em 0.5em;
@@ -83,21 +86,25 @@ $light-gray: rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid $light-gray;
     word-break: break-word;
     white-space: pre-line;
-    font-size: 0.8em;
-    background: orange;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.12em;
+    background: $background-gray;
 
     @media screen and (min-width: $tablet-breakpoint){
-      font-size: 1.1em;
+      font-size: 0.8em;
+      min-width: 20%;
     }
 
     &--selected {
       background: none;
+      color: $brand;
       border-bottom: 1px solid transparent;
       transition: background 0.1s ease;
     }
 
     &:hover:not(.carousel__tab--selected) {
-      background: rgba(255, 166, 0, 0.5);
+      background: $background-hover-gray;
       transition: background 0.1s ease;
     }
 
@@ -108,19 +115,20 @@ $light-gray: rgba(0, 0, 0, 0.1);
 
   &__button {
     display: flex;
-    height: $tab-height;
-    width: 2.5em;
+    height: 4em;
+    border-radius: 3px;
+    width: 3em;
     position: relative;
     background: $brand;
     z-index: 1;
-    border: 1px solid $light-gray;
-    margin-top: -($tab-height * 1.125);
+    border: none;
+    margin-top: -($tab-height * 0.9);
     opacity: 0;
     transition: opacity 0.3s ease;
+    justify-content: center;
 
     @media screen and (min-width: $tablet-breakpoint){
-      height: $tab-height * 1.125;
-      margin-top: -($tab-height * 1.425);
+      margin-top: -($tab-height);
     }
   }
 }
@@ -135,6 +143,10 @@ $light-gray: rgba(0, 0, 0, 0.1);
     float: left;
     margin-left: 0.25em;
   }
+}
+
+.indicator {
+  color: #fff;
 }
 
 .description {

@@ -17,4 +17,9 @@ describe('Carousel', () => {
     wrapper.find('.carousel__tab').first().simulate('click');
     expect(onTabClick).toHaveBeenCalled();
   });
+
+  it('handles an empty tab', () => {
+    const wrapper = shallow(<Carousel tabs={ [...tabs(), {}] } onTabClick={ jest.fn() } />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

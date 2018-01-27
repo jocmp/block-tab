@@ -40,8 +40,8 @@ class TabBlock extends React.Component {
               onTabClick={ this.onTabClick }
               selectedTabId={ this.state.selectedTabId } />
             <div className="description__wrapper">
-              { this.props.tabGroup.tabs.map(tab =>
-                <Description key={ tab.id } tab={ tab } active={ tab.id == this.state.selectedTabId } />
+              { this.props.tabGroup.tabs.map((tab, index) =>
+                <Description key={ index } tab={ tab } active={ tab.id == this.state.selectedTabId } />
               ) }
             </div>
           </div>
@@ -55,9 +55,9 @@ TabBlock.propTypes = {
   fetchTabGroup: PropTypes.func.isRequired,
   tabGroup: PropTypes.shape({
     tabs: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
+      id: PropTypes.string,
+      title: PropTypes.string,
+      text: PropTypes.string,
       media: PropTypes.string
     })).isRequired
   })

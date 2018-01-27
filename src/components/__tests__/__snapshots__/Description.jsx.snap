@@ -1,38 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Description renders correctly 1`] = `
-<div>
+exports[`Description handles empty description 1`] = `
+<div
+  className="description description--active"
+>
   <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<p>Description here</p>",
+    className="description__content description__content--active"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
       }
-    }
-  />
-  <ImageZoom
-    defaultStyles={
-      Object {
-        "image": Object {},
-        "overlay": Object {},
-        "zoomContainer": Object {},
-        "zoomImage": Object {},
+    />
+  </div>
+</div>
+`;
+
+exports[`Description renders correctly 1`] = `
+<div
+  className="description description--active"
+>
+  <div
+    className="description__content description__content--active"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
       }
-    }
-    image={
-      Object {
-        "className": "img",
-        "src": "fake://img.con",
-        "style": Object {
-          "width": "20em",
-        },
+    />
+    <figure
+      className="description__figure"
+    >
+      <ImageZoom
+        defaultStyles={
+          Object {
+            "image": Object {},
+            "overlay": Object {},
+            "zoomContainer": Object {},
+            "zoomImage": Object {},
+          }
+        }
+        image={
+          Object {
+            "className": "description__media",
+            "src": "fake://img.con",
+          }
+        }
+        onUnzoom={[Function]}
+        onZoom={[Function]}
+        shouldHandleZoom={[Function]}
+        shouldReplaceImage={true}
+        shouldRespectMaxDimension={false}
+        zoomMargin={40}
+      />
+    </figure>
+  </div>
+</div>
+`;
+
+exports[`Description renders inactive state 1`] = `
+<div
+  className="description"
+>
+  <div
+    className="description__content"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
       }
-    }
-    onUnzoom={[Function]}
-    onZoom={[Function]}
-    shouldHandleZoom={[Function]}
-    shouldReplaceImage={true}
-    shouldRespectMaxDimension={false}
-    zoomMargin={40}
-  />
+    />
+  </div>
 </div>
 `;

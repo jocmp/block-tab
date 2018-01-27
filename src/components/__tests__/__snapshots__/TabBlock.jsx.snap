@@ -34,6 +34,44 @@ exports[`Quiz Feedback renders correctly 1`] = `
           ]
         }
       />
+      <div
+        className="description__wrapper"
+      >
+        <Description
+          active={false}
+          key="0"
+          tab={
+            Object {
+              "description": "<p>Description here</p>",
+              "id": "0001",
+              "title": "Title 1",
+            }
+          }
+        />
+        <Description
+          active={false}
+          key="1"
+          tab={
+            Object {
+              "description": "<p>Description here</p>",
+              "id": "0010",
+              "title": "Title 2",
+            }
+          }
+        />
+        <Description
+          active={false}
+          key="2"
+          tab={
+            Object {
+              "description": "<p>Description here</p>",
+              "id": "0101",
+              "media": "fake://img.con",
+              "title": "Title 3",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
