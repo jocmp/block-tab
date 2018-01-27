@@ -28,7 +28,7 @@ exports[`Description renders correctly 1`] = `
     <div
       dangerouslySetInnerHTML={
         Object {
-          "__html": undefined,
+          "__html": "<p>Description here</p>",
         }
       }
     />

@@ -16,19 +16,19 @@ exports[`Quiz Feedback renders correctly 1`] = `
         tabs={
           Array [
             Object {
-              "description": "<p>Description here</p>",
               "id": "0001",
+              "text": "<p>Description here</p>",
               "title": "Title 1",
             },
             Object {
-              "description": "<p>Description here</p>",
               "id": "0010",
+              "text": "<p>Description here</p>",
               "title": "Title 2",
             },
             Object {
-              "description": "<p>Description here</p>",
               "id": "0101",
               "media": "fake://img.con",
+              "text": "<p>Description here</p>",
               "title": "Title 3",
             },
           ]
@@ -42,8 +42,8 @@ exports[`Quiz Feedback renders correctly 1`] = `
           key="0"
           tab={
             Object {
-              "description": "<p>Description here</p>",
               "id": "0001",
+              "text": "<p>Description here</p>",
               "title": "Title 1",
             }
           }
@@ -53,8 +53,8 @@ exports[`Quiz Feedback renders correctly 1`] = `
           key="1"
           tab={
             Object {
-              "description": "<p>Description here</p>",
               "id": "0010",
+              "text": "<p>Description here</p>",
               "title": "Title 2",
             }
           }
@@ -64,9 +64,9 @@ exports[`Quiz Feedback renders correctly 1`] = `
           key="2"
           tab={
             Object {
-              "description": "<p>Description here</p>",
               "id": "0101",
               "media": "fake://img.con",
+              "text": "<p>Description here</p>",
               "title": "Title 3",
             }
           }

@@ -1,95 +1,175 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Carousel handles an empty tab 1`] = `
-<div
-  className="carousel__wrapper"
+<Carousel
+  onTabClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "0001",
+        ],
+        Array [
+          "0010",
+        ],
+        Array [
+          "0101",
+        ],
+        Array [
+          undefined,
+        ],
+      ],
+    }
+  }
+  tabs={
+    Array [
+      Object {
+        "id": "0001",
+        "text": "<p>Description here</p>",
+        "title": "Title 1",
+      },
+      Object {
+        "id": "0010",
+        "text": "<p>Description here</p>",
+        "title": "Title 2",
+      },
+      Object {
+        "id": "0101",
+        "media": "fake://img.con",
+        "text": "<p>Description here</p>",
+        "title": "Title 3",
+      },
+      Object {},
+    ]
+  }
 >
   <div
-    className="carousel"
+    className="carousel__wrapper"
   >
-    <span
-      className="carousel__tab"
-      key="0"
+    <div
+      className="carousel"
     >
-      Title 1
-    </span>
-    <span
-      className="carousel__tab"
-      key="1"
+      <span
+        className="carousel__tab"
+        key="0"
+      >
+        Title 1
+      </span>
+      <span
+        className="carousel__tab"
+        key="1"
+      >
+        Title 2
+      </span>
+      <span
+        className="carousel__tab"
+        key="2"
+      >
+        Title 3
+      </span>
+      <span
+        className="carousel__tab carousel__tab--selected"
+        key="3"
+      />
+    </div>
+    <button
+      className="carousel__button btn--left"
+      onClick={[Function]}
     >
-      Title 2
-    </span>
-    <span
-      className="carousel__tab"
-      key="2"
+      <i
+        className="indicator fa fa-chevron-left"
+      />
+    </button>
+    <button
+      className="carousel__button btn--right btn--more"
+      onClick={[Function]}
     >
-      Title 3
-    </span>
-    <span
-      className="carousel__tab carousel__tab--selected"
-      key="3"
-    />
+      <i
+        className="indicator fa fa-chevron-right"
+      />
+    </button>
   </div>
-  <button
-    className="carousel__button btn--left"
-    onClick={[Function]}
-  >
-    <i
-      className="indicator fa fa-chevron-left"
-    />
-  </button>
-  <button
-    className="carousel__button btn--right btn--more"
-    onClick={[Function]}
-  >
-    <i
-      className="indicator fa fa-chevron-right"
-    />
-  </button>
-</div>
+</Carousel>
 `;
 
 exports[`Carousel renders correctly 1`] = `
-<div
-  className="carousel__wrapper"
+<Carousel
+  onTabClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "0001",
+        ],
+        Array [
+          "0010",
+        ],
+        Array [
+          "0101",
+        ],
+      ],
+    }
+  }
+  tabs={
+    Array [
+      Object {
+        "id": "0001",
+        "text": "<p>Description here</p>",
+        "title": "Title 1",
+      },
+      Object {
+        "id": "0010",
+        "text": "<p>Description here</p>",
+        "title": "Title 2",
+      },
+      Object {
+        "id": "0101",
+        "media": "fake://img.con",
+        "text": "<p>Description here</p>",
+        "title": "Title 3",
+      },
+    ]
+  }
 >
   <div
-    className="carousel"
+    className="carousel__wrapper"
   >
-    <span
-      className="carousel__tab"
-      key="0"
+    <div
+      className="carousel"
     >
-      Title 1
-    </span>
-    <span
-      className="carousel__tab"
-      key="1"
+      <span
+        className="carousel__tab"
+        key="0"
+      >
+        Title 1
+      </span>
+      <span
+        className="carousel__tab"
+        key="1"
+      >
+        Title 2
+      </span>
+      <span
+        className="carousel__tab"
+        key="2"
+      >
+        Title 3
+      </span>
+    </div>
+    <button
+      className="carousel__button btn--left"
+      onClick={[Function]}
     >
-      Title 2
-    </span>
-    <span
-      className="carousel__tab"
-      key="2"
+      <i
+        className="indicator fa fa-chevron-left"
+      />
+    </button>
+    <button
+      className="carousel__button btn--right btn--more"
+      onClick={[Function]}
     >
-      Title 3
-    </span>
+      <i
+        className="indicator fa fa-chevron-right"
+      />
+    </button>
   </div>
-  <button
-    className="carousel__button btn--left"
-    onClick={[Function]}
-  >
-    <i
-      className="indicator fa fa-chevron-left"
-    />
-  </button>
-  <button
-    className="carousel__button btn--right btn--more"
-    onClick={[Function]}
-  >
-    <i
-      className="indicator fa fa-chevron-right"
-    />
-  </button>
-</div>
+</Carousel>
 `;

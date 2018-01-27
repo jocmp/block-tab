@@ -5,7 +5,7 @@ import Description from '../Description';
 
 describe('Description', () => {
   const tab = () => (
-    { id: '0101', title: 'Title 3', description: "<p>Description here</p>", media: "fake://img.con" }
+    { id: '0101', title: 'Title 3', text: "<p>Description here</p>", media: "fake://img.con" }
   );
 
   it('renders correctly', () => {

@@ -1,24 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'underscore';
 import classNames from 'classnames';
 
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { moreToScroll: true };
+    this.state = { canScrollLeft: false, canScrollRight: true };
 
     this.scrollToStart = this.scrollToStart.bind(this);
     this.scrollToEnd = this.scrollToEnd.bind(this);
+    this.updateScrollOptions = this.updateScrollOptions.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateScrollOptions);
+    this.carousel.addEventListener('scroll', this.updateScrollOptions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateScrollOptions);
+    this.carousel.removeEventListener('scroll', this.updateScrollOptions);
+  }
+
+  updateScrollOptions() {
+    this.setState({
+      canScrollLeft: this.carousel.scrollLeft > 0,
+      canScrollRight: this.carousel.scrollLeft != (this.carousel.scrollWidth - this.carousel.clientWidth)
+    });
   }
 
   scrollToStart() {
-    this.carousel.scrollBy({ left: -this.carousel.clientWidth, behavior: 'smooth' });
-    this.setState({ moreToScroll: true });
+    this.carousel.scrollBy({ left: -this.carousel.scrollWidth, behavior: 'smooth' });
+    this.updateScrollOptions();
   }
 
   scrollToEnd() {
-    this.carousel.scrollBy({ left: this.carousel.clientWidth, behavior: 'smooth' });
-    this.setState({ moreToScroll: false });
+    this.carousel.scrollBy({ left: this.carousel.scrollWidth, behavior: 'smooth' });
+    this.updateScrollOptions();
   }
 
   render() {
@@ -35,12 +54,12 @@ class Carousel extends React.Component {
           ) }
         </div>
         <button
-          className={ classNames('carousel__button', 'btn--left', { 'btn--more': !this.state.moreToScroll }) }
+          className={ classNames('carousel__button', 'btn--left', { 'btn--more': this.state.canScrollLeft }) }
           onClick={ this.scrollToStart }>
           <i className="indicator fa fa-chevron-left" />
         </button>
         <button
-          className={ classNames('carousel__button', 'btn--right', { 'btn--more': this.state.moreToScroll }) }
+          className={ classNames('carousel__button', 'btn--right', { 'btn--more': this.state.canScrollRight }) }
           onClick={ this.scrollToEnd }>
           <i className="indicator fa fa-chevron-right" />
         </button>
