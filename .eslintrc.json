@@ -32,7 +32,7 @@
         ],
         "no-undef": "off",
         "quotes": [
-            "none"
+            0
         ],
         "semi": [
             "error",

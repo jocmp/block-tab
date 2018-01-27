@@ -37,11 +37,12 @@ class Carousel extends React.Component {
         <button
           className={ classNames('carousel__button', 'btn--left', { 'btn--more': !this.state.moreToScroll }) }
           onClick={ this.scrollToStart }>
-          { '<-' }
+          <i className="indicator indicator-left" />
         </button>
         <button
           className={ classNames('carousel__button', 'btn--right', { 'btn--more': this.state.moreToScroll }) }
-          onClick={ this.scrollToEnd }>{ '->' }
+          onClick={ this.scrollToEnd }>
+          <i className="fa fa-chevron-right" />
         </button>
       </div>
     );
@@ -56,7 +57,7 @@ Carousel.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
     media: PropTypes.string
   })).isRequired
 };

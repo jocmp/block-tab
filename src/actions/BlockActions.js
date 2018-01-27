@@ -5,7 +5,7 @@ const tabGroups = {
       {
         id: '1',
         title: 'Embracing Discovery',
-        description: "<p>Every creative endeavor requires that you take risks.\
+        text: "<p>Every creative endeavor requires that you take risks.\
          If you try and don't succeed, you've still learned something. \
          It took Thomas Edison more than 10,000 tries to invent a viable \
          lightbulb. You're not failing. You're discovering what doesn't work.</p>",
@@ -14,7 +14,7 @@ const tabGroups = {
       {
         id: '2',
         title: 'Gaining Insight',
-        description: "<p>To spark creativity, feed your brain material \
+        text: "<p>To spark creativity, feed your brain material \
         like you're cramming for a tough test. Then stop thinking about \
         the problem you want to solve. Go surfing or take a leisurely walk. \
         Research shows that letting your mind wander fosters creativity.</p>\
@@ -26,7 +26,7 @@ const tabGroups = {
       {
         id: '3',
         title: 'Making It Real',
-        description: "<p>No creative process is truly complete until it manifests \
+        text: "<p>No creative process is truly complete until it manifests \
         a tangible reality. Whether your idea is an action or a physical creation, \
         bringing it to life will likely involve the hard work of iteration, testing, \
         and refinement.</p><p>Just be wary of perfectionism. Push yourself to share your \
@@ -37,7 +37,7 @@ const tabGroups = {
       {
         id: '4',
         title: 'Love The Work',
-        description: "<p>Every creative endeavor requires that you take risks. \
+        text: "<p>Every creative endeavor requires that you take risks. \
         If you try and don't succeed, you've still learned something. It took \
         Thomas Edison more than 10,000 tries to invent a viable lightbulb. \
         You're not failing. You're discovering what doesn't work.</p>",
@@ -46,7 +46,7 @@ const tabGroups = {
       {
         id: '5',
         title: 'Have Fun',
-        description: "<p>Every creative endeavor requires that you take risks. \
+        text: "<p>Every creative endeavor requires that you take risks. \
         If you try and don't succeed, you've still learned something. It took \
         Thomas Edison more than 10,000 tries to invent a viable lightbulb. \
         You're not failing. You're discovering what doesn't work.</p>"
