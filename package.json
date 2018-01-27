@@ -1,9 +1,9 @@
 {
   "name": "articulate-developer-challenge",
   "version": "0.0.1",
-  "description": "Take-home challenge for Articulate",
+  "description": "",
   "main": "index.js",
-  "repository": "github.com/josiahcampbell/articulate-developer-challenge",
+  "repository": "github.com/josiahcampbell/block-tab",
   "author": "Josiah Campbell <josiahcampbell64@gmail.com>",
   "private": true,
   "scripts": {
